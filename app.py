@@ -4,27 +4,28 @@ import numpy as np
 
 # Set page configuration
 st.set_page_config(
-    page_title="Glucaband - HOSA Medical Innovation",
+    page_title="Glucaband - HOSA Medical Innovation:",
     page_icon="💡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Sidebar navigation
-st.sidebar.title("Navigation")
+st.sidebar.title("Slides")
 sections = [
     "Overview",
     "Technology & Innovation",
     "Healthcare Impact",
     "Comparison",
     "Logistics",
-    "Exhibit Plan"
+    "About Us",
+
 ]
 selection = st.sidebar.radio("Go to Section:", sections)
 
 # Section 1: Overview
 if selection == "Overview":
-    st.title("Glucaband - Non-Invasive Glucose Monitoring")
+    st.title("Glucaband - Non-Invasive Glucose Monitoring:")
     st.write("""
     Welcome to the Glucaband app! This portfolio showcases our innovative approach to non-invasive glucose monitoring,
     designed for the HOSA Medical Innovation competition.
@@ -69,7 +70,7 @@ if selection == "Comparison":
 
     # Cost Comparison Graph
     brands = ["Fingerstick", "Glucose Patches", "Non-Invasive Devices", "Glucaband"]
-    costs = [20, 70, 120, 20]
+    costs = [20, 70, 120, 45]
     x_positions = np.arange(len(brands)) * 1.5
 
     st.write("### Cost Comparison")
@@ -107,16 +108,18 @@ if selection == "Logistics":
     **Total Estimated Cost per Unit**: **$70**
     """)
     st.success("**Scalability Potential:** With bulk production, costs could drop below $50 per unit.")
-
-# Section 6: Exhibit Plan
-if selection == "Exhibit Plan":
-    st.header("🎨 Exhibit Plan for HOSA")
+if selection == "About Us":
+    st.header("About Us")
     st.write("""
-    ### Exhibit Presentation Plan
-    1. **Innovation Description**: What Glucaband is, how it works, and its benefits.
-    2. **Healthcare Impact**: Explain how Glucaband transforms glucose monitoring and improves quality of life.
-    3. **Creative Presentation**: Use a 3D-printed model, LCD screen, and visual aids to showcase the prototype.
-    4. **Technical Demonstration**: Live demo of glucose monitoring simulation using the prototype.
-    5. **Artistic Elements**: Sleek design, engaging visuals, and an interactive setup.
+    ### Harihar
+    - **Favorite Food**: Chipotle Burrito Bowl
+    - **Favorite Movie**: Oppenheimer
+    - **Favorite Activity**: Playing Pickleball
     """)
-    st.info("Ensure the exhibit fits within the 48x24 inch size limit and uses battery-powered components.")
+    st.write("""
+    ### Satvik
+    - **Favorite Food**: Pasta
+    - **Favorite Movie**: Baahubali 2
+    - **Favorite Activity**: Rubix Cubing
+    """)
+# Section 6: Exhibit Plan

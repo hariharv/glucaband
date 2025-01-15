@@ -32,9 +32,9 @@ if selection == "Title":
     Welcome to the Glucaband app! This portfolio showcases our innovative approach to non-invasive glucose monitoring,
     designed for the HOSA Medical Innovation competition.
     
-    **Team Member Names**: Harihar and Satvik 
+    **Team Member Names**: Harihar Vadrevu and Satvik Thakur
 
-    **HOSA Division**: Secondary Division
+    **HOSA Division**: Area 1, Secondary Division
     
     **HOSA Chapter #**: 60294
 
@@ -52,6 +52,27 @@ if selection == "Description":
     Glucaband is a **non-invasive glucose monitoring device** designed to eliminate the pain and inconvenience of traditional glucose testing methods.  
     It uses advanced technology to provide accurate, real-time glucose readings without the discomfort of fingersticks or invasive patches.
     """)
+    st.subheader("Prototype Design")
+    col1, col2 = st.columns([1.5, 3])
+    with col1:
+        st.image(
+            "sketch.png", 
+            caption="Prototype Sketch of Glucaband",
+            use_container_width=False,
+            width=420
+            
+            )
+    with col2:
+        # Add padding to the text for better spacing
+        st.markdown("""
+        **Explanation of the Prototype Design**:
+        - **Infrared LED and Photodiode**: Positioned on the underside of the band to measure glucose levels using infrared spectroscopy.
+        - **Temperature Sensor**: Situated under the band, ensuring accuracy by addressing environmental and skin temperature variations.
+        - **Accelerometer**: Tracks physical activity and adjusts glucose readings accordingly.
+        - **LCD Screen**: Displays real-time glucose readings along with temperature and activity data.
+        - Glucaband's **elegant wearable design** guarantees user comfort and portability, making it ideal for daily use.
+        """, unsafe_allow_html=True)
+    
     st.subheader("How Does It Work?")
     st.write("""
     - **Infrared Spectroscopy**: Measures glucose levels by analyzing light absorption through the skin.

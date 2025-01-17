@@ -66,7 +66,7 @@ if selection == "Description":
             "sketch.png", 
             caption="Prototype Sketch of Glucaband",
             use_container_width=False,
-            width=420
+            width=380
             
             )
     with col2:

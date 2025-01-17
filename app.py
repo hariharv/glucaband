@@ -29,9 +29,10 @@ selection = st.sidebar.radio("Go to Section:", sections)
 if selection == "Title":
     st.title("Glucaband - Non-Invasive Glucose Monitoring:")
     st.write("""
-    Welcome to the Glucaband app! This portfolio showcases our innovative approach to non-invasive glucose monitoring,
-    designed for the HOSA Medical Innovation competition.
+    Welcome to the Glucaband app! This outline showcases our innovative approach to non-invasive glucose monitoring.
     
+    **HOSA Event**: Medical Innovation
+
     **Team Member Names**: Harihar Vadrevu and Satvik Thakur
 
     **HOSA Division**: Area 1, Secondary Division
@@ -52,6 +53,12 @@ if selection == "Description":
     Glucaband is a **non-invasive glucose monitoring device** designed to eliminate the pain and inconvenience of traditional glucose testing methods.  
     It uses advanced technology to provide accurate, real-time glucose readings without the discomfort of fingersticks or invasive patches.
     """)
+    st.subheader("How Does It Work?")
+    st.write("""
+    - **Infrared Spectroscopy**: Measures glucose levels by analyzing light absorption through the skin.
+    - **Temperature Calibration**: Compensates for environmental and physiological variations for accurate readings.
+    - **Motion Detection**: Uses an accelerometer to account for physical activity and refine results.
+    """)
     st.subheader("Prototype Design")
     col1, col2 = st.columns([1.5, 3])
     with col1:
@@ -65,31 +72,21 @@ if selection == "Description":
     with col2:
         # Add padding to the text for better spacing
         st.markdown("""
-        **Explanation of the Prototype Design**:
+        **Explanation and Functionality of the Components in the Prototype Design**:
         - **Infrared LED and Photodiode**: Positioned on the underside of the band to measure glucose levels using infrared spectroscopy.
         - **Temperature Sensor**: Situated under the band, ensuring accuracy by addressing environmental and skin temperature variations.
         - **Accelerometer**: Tracks physical activity and adjusts glucose readings accordingly.
-        - **LCD Screen**: Displays real-time glucose readings along with temperature and activity data.
+        - **Arduino Uno and LCD Screen**: Provides a sleek and user-friendly interface to display real-time glucose readings along with temperature and activity data.
         - Glucaband's **elegant wearable design** guarantees user comfort and portability, making it ideal for daily use.
         """, unsafe_allow_html=True)
     
-    st.subheader("How Does It Work?")
-    st.write("""
-    - **Infrared Spectroscopy**: Measures glucose levels by analyzing light absorption through the skin.
-    - **Temperature Calibration**: Compensates for environmental and physiological variations for accurate readings.
-    - **Motion Detection**: Uses an accelerometer to account for physical activity and refine results.
-    """)
-    st.subheader("Functional Components")
-    st.write("""
-    - **Arduino Uno and LCD Screen**: Provides a sleek and user-friendly interface.
-    - **IR LED and Photodiode Pair**: Detects glucose concentrations via light absorption.
-    - **Temperature Sensor**: Improves accuracy by adjusting for skin temperature.
-    - **Accelerometer**: Tracks activity levels to refine glucose readings.
-    """)
+    
+
     st.subheader("Applications")
     st.write("""
+
     - **Daily Glucose Monitoring**: Makes life for diabetic and pre-diabetic patients much more convenient.
-    - **Accessibility**: Affordable and portable design for underserved populations.
+    - **Accessibility**: Affordable and portable design for underpriviliged populations.
     """)
     st.info("**Why Glucaband is Innovative:** Combines cost-effectiveness, user-friendliness, and advanced technology to redefine glucose monitoring.")
 
@@ -106,7 +103,7 @@ if selection == "Healthcare Impact":
     """)
     st.subheader("Long-Term Impact")
     st.write("""
-    - Reduces reliance on consumables like test strips, lowering long-term costs for patients.
+    - Reduces reliance on polluting one-time purchases like test strips, providing an eco-friendly alternative.
     - Encourages widespread adoption of glucose monitoring in both diabetic and pre-diabetic populations.
     """)
 
@@ -114,7 +111,7 @@ if selection == "Healthcare Impact":
     ### Quality of Life Improvements
     By eliminating the need for invasive methods, Glucaband improves the quality of life for:
     - Diabetic patients who require frequent monitoring.
-    - Elderly individuals and children who find fingersticks challenging.
+    - Elderly individuals and children who find fingersticks difficult to use.
     - Patients in remote areas with limited access to medical facilities.
     """)
 # Section 4: Comparison
@@ -135,7 +132,7 @@ if selection == "Comparison":
     st.header("💰 Healthcare Cost Reduction")
     st.write("""
     ### Lowering Costs for Patients
-    - **One-Time Cost**: Glucaband eliminates the need for recurring consumables like test strips or patch replacements.
+    - **One-Time Cost**: Glucaband eliminates the need for recurring purchases like test strips or patch replacements.
     - **Fewer Hospital Visits**: Enables at-home monitoring, reducing dependence on healthcare facilities.
     """)
     st.subheader("Scalability and Affordability")
@@ -171,31 +168,31 @@ if selection == "Creative & Artistic Impact":
     st.header("🎨 Creative & Artistic Impact")
     st.write("""
     ### Exhibit Design
-    - **3D-Printed Model**: A polished and stylish modern prototype of Glucaband.
+    - **3D-Printed Model**: A polished and stylish modern prototype of Glucaband will be part of our presentation.
     - **Interactive Simulation**: Judges can explore the device’s functionality through interacting with the prototype and measuring their respective glucose levels.
-    - **Visual Aids**: Infographics, graphs, and comparison tables to clearly explain the innovation.
-    - **Trifold**: Trifold showcasing the unique features and novel problems addressed by Glucaband.
+    - **Visual Aids**: Infographics, graphs, and comparison tables will be used to clearly explain the innovation.
+    - **Trifold**: Trifold showcasing the unique and novel features of Glucaband as well as the problems addressed by it.
     """)
     st.subheader("Artistic Elements")
     st.write("""
-    - Engaging presentation materials with a clean and professional design.
-    - Live demonstration of the prototype’s features on the Arduino, hoping to create a memorable and impactful presentation.
+    - Clean and professional design through the use of vibrant and eye-popping visuals, and top-of-the-line presentation materials.
+    - A live demonstration of the prototype’s features on the Arduino, hoping to create a lasting memorable impact on the medical field.
     """)
 # Section 5: Logistics
 if selection == "Logistics":
     st.header("🛠 Logistics and Cost Analysis")
     st.write("""
     ### Estimated Cost Breakdown
-    - **IR LED and Photodiode Pair**: $5
-    - **MLX90614 Temperature Sensor**: $15
-    - **Accelerometer (MPU6050)**: $10
-    - **Microcontroller (Arduino)**: $25
-    - **Battery and Power Supply**: $10
-    - **3D-Printed Case**: $5
+    - **IR LED and Photodiode Pair**: $3
+    - **MLX90614 Temperature Sensor**: $10
+    - **Accelerometer (MPU6050)**: $5
+    - **Microcontroller (Arduino)**: $20
+    - **Battery and Power Supply**: $5
+    - **3D-Printed Case**: $2
     
-    **Total Estimated Cost per Unit**: **$70**
+    **Total Estimated Cost per Unit**: **$50**
     """)
-    st.success("**Scalability Potential:** With bulk production, costs could drop below $50 per unit.")
+    st.success("**Scalability Potential:** With bulk production, costs could drop below $35 per unit.")
 if selection == "References":
     st.header("📚 References")
     st.write("""
@@ -203,7 +200,6 @@ if selection == "References":
     - National Diabetes Statistics Report. (2022). Centers for Disease Control and Prevention. Retrieved from [https://www.cdc.gov](https://www.cdc.gov)
     - American Diabetes Association. (2024). Standards of Medical Care in Diabetes. *Diabetes Care*, 47(Supplement 1), S1–S210.
     """)
-
 if selection == "About Us":
     st.header("About Us")
     st.write("""

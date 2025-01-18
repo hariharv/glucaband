@@ -65,7 +65,7 @@ if selection == "Description":
         st.image(
             "sketch.png", 
             caption="Prototype Sketch of Glucaband",
-            use_column_width=True,
+            use_container_width=True,
             
             )
     with col2:

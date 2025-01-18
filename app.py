@@ -60,13 +60,12 @@ if selection == "Description":
     - **Motion Detection**: Uses an accelerometer to account for physical activity and refine results.
     """)
     st.subheader("Prototype Design")
-    col1, col2 = st.columns([1.5, 3])
+    col1, col2 = st.columns([1,2])
     with col1:
         st.image(
             "sketch.png", 
             caption="Prototype Sketch of Glucaband",
-            use_container_width=False,
-            width=420
+            use_container_width=True,
             
             )
     with col2:

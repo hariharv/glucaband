@@ -184,7 +184,7 @@ if selection == "Logistics":
     ### Estimated Cost Breakdown
     - **IR LED and Photodiode Pair**: $3
     - **MLX90614 Temperature Sensor**: $10
-    - **Accelerometer (MPU6050)**: $5
+    - **Accelerometer (MPU6050)**: $10
     - **Microcontroller (Arduino)**: $20
     - **Battery and Power Supply**: $5
     - **3D-Printed Case**: $2

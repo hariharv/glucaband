@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-
+import pandas as pd
 # Set page configuration
 st.set_page_config(
     page_title="Glucaband - HOSA Medical Innovation:",
@@ -93,47 +93,90 @@ if selection == "Description":
 
 # Section 3: Healthcare Impact
 if selection == "Healthcare Impact":
-    st.header("💡 Healthcare Delivery Impact")
-    st.write("""
-    ### Revolutionizing Healthcare
-    Glucaband transforms patient care in the following ways:
-    - **Non-Invasive Monitoring**: Eliminates the need for painful fingersticks or invasive patches.
-    - **Proactive Health Management**: Allows patients to monitor trends and detect glucose anomalies early, reducing complications.
     
+    col1, col2 = st.columns([0.7, 0.5])
+
+    with col1:
+        st.header("💡 Healthcare Delivery Impact")
+        st.markdown("""
+        ### Revolutionizing Healthcare
+        Glucaband transforms patient care in the following ways:
+        - **Non-Invasive Monitoring**: Eliminates the need for painful fingersticks or invasive patches.
+        - **Proactive Health Management**: Allows patients to monitor trends and detect glucose anomalies early, reducing complications.
+    
+        """)
+        st.markdown("""
+        ### Target Audience
+    
+        Glucaband is tailored to meet the needs of a wide range of individuals, these include: 
+        - Type 1 and Type 2 Diabetic patients who require frequent monitoring.
+        - Pre-diabetic individuals who can benefit from Glucaband's preventative measures
+        - Elderly people and children who find fingersticks difficult to use.
+        - Patients in remote areas with limited access to medical facilities.
+        - Athletes and fitness enthusiants who require glucose monitoring during physical activity.
     """)
-    
-    st.write("""
-    ### Target Audience
-    
-    Glucaband is tailored to meet the needs of a wide range of individuals, these include: 
-    - Type 1 and Type 2 Diabetic patients who require frequent monitoring.
-    - Pre-diabetic individuals who can benefit from Glucaband's preventative measures
-    - Elderly people and children who find fingersticks difficult to use.
-    - Patients in remote areas with limited access to medical facilities.
-    - Athletes and fitness enthusiants, as Glucaband can monitor glucose levels even during physical activity.
-    """)
-
-    st.write("""
-    ### Quality of Life Improvements
-    By eliminating the need for invasive methods and offering real-time, accurate monitoring, Glucaband significantly enhances the quality of life for its users by providing the following:
-    
-    - **Comfort and Convenience**: We remove the pain and inconvenience of frequently using fingersticks, making glucose monitoring effortless.
-    - **Early Detection and Prevention**: By using glucaband, pre-diabetic individuals can make lifestyle-adjustments to prevent the onset of diabetes.
-    - **Reduced Anxiety**: Glucaband offers peace of mind with reliable, non-invasive readings that are easy to understand and access.
-    - **Improved Accessibility**: Glucaband ensures that users can monitor their glucose levels wherever they are, without the hassle of visiting healthcare facilities.
-    - **Enhanced Daily Living**: Glucaband promotes independence and empowers users to take proactive control of their health.
-
-    Together, these improvements make Glucaband a transformative tool for diabetes management and overall well-being.
-""")
-
-
-    st.subheader("Long-Term Impact")
-    st.write("""
-    - Glucaband reduces reliance on polluting one-time purchases like test strips, providing an eco-friendly alternative.
-    - Glucaband encourages widespread adoption of glucose monitoring in both diabetic and pre-diabetic populations.
-    - Insights from Glucaband can help healthcare providers devise new treatment plans.
+        st.markdown("""
+        ### Quality of Life Improvements
+        Glucaband significantly enhances the quality of life for its users by providing:
+        - **Comfort and Convenience**: Removes the pain and inconvenience of fingersticks.
+        - **Early Detection and Prevention**: Makes lifestyle-adjustments to prevent diabetes.
+        - **Reduced Anxiety**: Offers peace of mind with reliable, non-invasive readings.
+        - **Improved Accessibility**: Monitors glucose levels wherever users are.
+        - **Enhanced Daily Living**: Promotes independence and empowers users.
     """)
 
+
+        st.subheader("Long-Term Impact")
+        st.markdown("""
+        - Glucaband reduces reliance on polluting one-time purchases like test strips, providing an eco-friendly alternative.
+        - Glucaband encourages widespread adoption of glucose monitoring in both diabetic and pre-diabetic populations.
+        - Insights from Glucaband can help healthcare providers devise new treatment plans.
+        """)
+
+    with col2:
+        # TABLE OPTIONS (Choose One)
+
+        # Option 1: Statistics on Diabetes
+        st.subheader("Diabetes Statistics")
+        data_stats = {
+            "Statistic": [
+                "People with diabetes worldwide (2021)",
+                "Projected increase by 2045",
+                "Annual diabetes-related deaths",
+                "Annual cost of diabetes in the US",
+            ],
+            "Value": ["537 million", "783 million", "6.7 million", "$327 billion"],
+        }
+        df_stats = pd.DataFrame(data_stats)
+        st.table(df_stats.set_index("Statistic"))
+
+        # Option 2: Key Benefits of Glucaband
+        st.subheader("Key Benefits of Glucaband")
+        data_benefits = {
+            "Benefit": [
+                "Non-invasive",
+                "Continuous Monitoring",
+                "Real-time Data",
+                "Personalized Insights",
+                "Telehealth Integration",
+            ],
+            "Description": [
+                "No fingersticks or painful sensors",
+                "Tracks glucose levels 24/7",
+                "Immediate feedback via app",
+                "Tailored recommendations",
+                "Connects with healthcare providers remotely",
+            ],
+        }
+        df_benefits = pd.DataFrame(data_benefits)
+        st.table(df_benefits.set_index("Benefit"))
+    
+
+    
+
+
+    # Create a Pandas DataFrame for the table
+    
     
 # Section 4: Comparison
 if selection == "Comparison":

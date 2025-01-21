@@ -99,20 +99,42 @@ if selection == "Healthcare Impact":
     Glucaband transforms patient care in the following ways:
     - **Non-Invasive Monitoring**: Eliminates the need for painful fingersticks or invasive patches.
     - **Proactive Health Management**: Allows patients to monitor trends and detect glucose anomalies early, reducing complications.
+    
     """)
-    st.subheader("Long-Term Impact")
+    
     st.write("""
-    - Reduces reliance on polluting one-time purchases like test strips, providing an eco-friendly alternative.
-    - Encourages widespread adoption of glucose monitoring in both diabetic and pre-diabetic populations.
+    ### Target Audience
+    
+    Glucaband is tailored to meet the needs of a wide range of individuals, these include: 
+    - Type 1 and Type 2 Diabetic patients who require frequent monitoring.
+    - Pre-diabetic individuals who can benefit from Glucaband's preventative measures
+    - Elderly people and children who find fingersticks difficult to use.
+    - Patients in remote areas with limited access to medical facilities.
+    - Athletes and fitness enthusiants, as Glucaband can monitor glucose levels even during physical activity.
     """)
 
     st.write("""
     ### Quality of Life Improvements
-    By eliminating the need for invasive methods, Glucaband improves the quality of life for:
-    - Diabetic patients who require frequent monitoring.
-    - Elderly individuals and children who find fingersticks difficult to use.
-    - Patients in remote areas with limited access to medical facilities.
+    By eliminating the need for invasive methods and offering real-time, accurate monitoring, Glucaband significantly enhances the quality of life for its users by providing the following:
+    
+    - **Comfort and Convenience**: We remove the pain and inconvenience of frequently using fingersticks, making glucose monitoring effortless.
+    - **Early Detection and Prevention**: By using glucaband, pre-diabetic individuals can make lifestyle-adjustments to prevent the onset of diabetes.
+    - **Reduced Anxiety**: Glucaband offers peace of mind with reliable, non-invasive readings that are easy to understand and access.
+    - **Improved Accessibility**: Glucaband ensures that users can monitor their glucose levels wherever they are, without the hassle of visiting healthcare facilities.
+    - **Enhanced Daily Living**: Glucaband promotes independence and empowers users to take proactive control of their health.
+
+    Together, these improvements make Glucaband a transformative tool for diabetes management and overall well-being.
+""")
+
+
+    st.subheader("Long-Term Impact")
+    st.write("""
+    - Glucaband reduces reliance on polluting one-time purchases like test strips, providing an eco-friendly alternative.
+    - Glucaband encourages widespread adoption of glucose monitoring in both diabetic and pre-diabetic populations.
+    - Insights from Glucaband can help healthcare providers devise new treatment plans.
     """)
+
+    
 # Section 4: Comparison
 if selection == "Comparison":
     st.header("📊 Comparison with Other Technologies")
@@ -167,7 +189,7 @@ if selection == "Creative & Artistic Impact":
     st.header("🎨 Creative & Artistic Impact")
     st.write("""
     ### Exhibit Design
-    - **3D-Printed Model**: A polished and stylish modern prototype of Glucaband will be part of our presentation.
+    - **3D-Printed Model**: A polished modern prototype of Glucaband will be part of our presentation.
     - **Interactive Simulation**: Judges can explore the device’s functionality through interacting with the prototype and measuring their respective glucose levels.
     - **Visual Aids**: Infographics, graphs, and comparison tables will be used to clearly explain the innovation.
     - **Trifold**: Trifold showcasing the unique and novel features of Glucaband as well as the problems addressed by it.
